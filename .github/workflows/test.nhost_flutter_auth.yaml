@@ -115,10 +115,10 @@ jobs:
 
       # Report coverage
       - name: Report coverage
-        uses: zgosalvez/github-actions-report-lcov@v1
+        uses: zgosalvez/github-actions-report-lcov@v4
         with:
           artifact-name: "Test coverage for nhost_flutter_auth"
           coverage-files: packages/nhost_flutter_auth/coverage/lcov.info
           working-directory: packages/nhost_flutter_auth/
           github-token: ${{ github.token }}
-        if: ${{ github.event_name != 'pull_request' && steps.check_coverage_exists.outputs.files_exists == 'true' }}
+        if: ${{ github.event_name == 'pull_request' && steps.check_coverage_exists.outputs.files_exists == 'true' }}
