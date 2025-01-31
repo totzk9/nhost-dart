@@ -115,7 +115,7 @@ jobs:
 
       # Report coverage
       - name: Report coverage
-        uses: zgosalvez/github-actions-report-lcov@v1
+        uses: zgosalvez/github-actions-report-lcov@v4
         with:
           artifact-name: "Test coverage for nhost_flutter_auth"
           coverage-files: packages/nhost_flutter_auth/coverage/lcov.info
