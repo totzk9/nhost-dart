@@ -123,6 +123,6 @@ GraphQLClient createNhostGraphQLClientForAuth(
     alwaysRebroadcast: alwaysRebroadcast ?? false,
     deepEquals: deepEquals,
     deduplicatePollers: deduplicatePollers ?? false,
-    queryRequestTimeout: queryRequestTimeout ?? const Duration(seconds: 5),
+    queryRequestTimeout: queryRequestTimeout ?? const Duration(minutes: 1),
   );
 }
